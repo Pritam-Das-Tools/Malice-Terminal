@@ -1,0 +1,55 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000; /* Black background for the whole page */
+  color: #FFF; /* White text for the whole page */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.terminal-window {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+  /* This container also needs a black background */
+  background-color: #000;
+}
+
+#terminal-output {
+  flex-grow: 1;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
+
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+}
+
+.prompt {
+  margin-right: 8px;
+}
+
+#command-input {
+  flex-grow: 1;
+  /* These three lines make it 'invisible' */
+  background-color: transparent;
+  border: none;
+  outline: none;
+  
+  /* These two ensure the text you type is visible */
+  color: #FFF;
+  font-family: inherit;
+  
+  font-size: 1em;
+}
+
+pre {
+  margin: 0;
+  padding: 0;
+  white-space: pre-wrap; /* Allows long lines to wrap */
+  word-wrap: break-word;
+}
